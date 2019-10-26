@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    var posts:[Post] = [Post]()
+    var posts:[NSManagedObject] = [NSManagedObject]()
     let cellID = "CellLayout"
     
     override func viewDidLoad() {
@@ -20,7 +21,11 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView.backgroundColor = .white
         collectionView.alwaysBounceVertical = true
         
+        
+        saveImage(image: UIImage(named: "gatito")!, fileName: "NuevoGatito")
+        purge()
         setupData()
+        fetchData()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -7,6 +7,15 @@
 //
 import UIKit
 
+extension PostCell {
+    func getSavedImage(fileName:String) -> UIImage? {
+        if let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) {
+            return UIImage(contentsOfFile: URL(fileURLWithPath: directory.absoluteString).appendingPathComponent(fileName).path)
+        }
+        return nil
+    }
+}
+
 extension UIColor {
     
     static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {

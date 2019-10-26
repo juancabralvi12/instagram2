@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import CoreData
 
 class PostCell: UICollectionViewCell {
     
-    var post:Post? {
+    var post:NSManagedObject? {
         didSet {
             if let post = post {
-                profileImageView.image = UIImage(named: post.userImage ?? "")
-                profileNameLabel.text = post.userName ?? ""
-                picture.image = UIImage(named: post.postImage ?? "")
+                let profileImageName = post.value(forKey: "userImage") as? String ?? ""
+                profileImageView.image = getSavedImage(fileName: profileImageName)
+                
+                profileNameLabel.text = post.value(forKey: "userName") as? String ?? ""
+                
+                let pictureImageName = post.value(forKey: "postImage") as? String ?? ""
+                picture.image = getSavedImage(fileName: pictureImageName)
             }
         }
     }
