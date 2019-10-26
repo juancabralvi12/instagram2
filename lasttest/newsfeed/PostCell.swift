@@ -8,11 +8,15 @@
 
 import UIKit
 
-class FeedCell: UICollectionViewCell {
+class PostCell: UICollectionViewCell {
     
     var post:Post? {
         didSet {
-            
+            if let post = post {
+                profileImageView.image = UIImage(named: post.userImage ?? "")
+                profileNameLabel.text = post.userName ?? ""
+                picture.image = UIImage(named: post.postImage ?? "")
+            }
         }
     }
     
