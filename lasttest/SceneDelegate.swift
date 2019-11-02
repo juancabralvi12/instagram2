@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             //window.rootViewController = UIHostingController(rootView: contentView)
             
-            window.rootViewController = UINavigationController(rootViewController: FeedController(collectionViewLayout: UICollectionViewFlowLayout()))
+            window.rootViewController = MainTabBarController() /*UINavigationController(rootViewController: FeedController(collectionViewLayout: UICollectionViewFlowLayout()))*/
             self.window = window
             window.makeKeyAndVisible()
         }
