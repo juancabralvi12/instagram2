@@ -22,6 +22,7 @@
 		84D4BB9D23649255006F0B8D /* FeedControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4BB9C23649255006F0B8D /* FeedControllerHelper.swift */; };
 		84D4BB9F236497A9006F0B8D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4BB9E236497A9006F0B8D /* Post.swift */; };
 		84D4BBC52364A43E006F0B8D /* InstagramModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84D4BBC32364A43E006F0B8D /* InstagramModel.xcdatamodeld */; };
+		84FD3E42236DD9C600AA3CAC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD3E41236DD9C600AA3CAC /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		84D4BB9C23649255006F0B8D /* FeedControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedControllerHelper.swift; sourceTree = "<group>"; };
 		84D4BB9E236497A9006F0B8D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		84D4BBC42364A43E006F0B8D /* InstagramModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InstagramModel.xcdatamodel; sourceTree = "<group>"; };
+		84FD3E41236DD9C600AA3CAC /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		845727C12351B9E2008C1F85 /* lasttest */ = {
 			isa = PBXGroup;
 			children = (
+				846421BD236DD87B00AB5861 /* bootstrap */,
 				8499FE69235B650E00709432 /* newsfeed */,
 				8463B464235B572200BFC80F /* extensions */,
 				845727C22351B9E2008C1F85 /* AppDelegate.swift */,
@@ -105,6 +108,14 @@
 				8463B465235B573300BFC80F /* Extensions.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		846421BD236DD87B00AB5861 /* bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				84FD3E41236DD9C600AA3CAC /* MainTabBarController.swift */,
+			);
+			path = bootstrap;
 			sourceTree = "<group>";
 		};
 		8499FE69235B650E00709432 /* newsfeed */ = {
@@ -196,6 +207,7 @@
 				845727D72351B9F4008C1F85 /* LoginController.swift in Sources */,
 				845727C52351B9E2008C1F85 /* SceneDelegate.swift in Sources */,
 				84D4BBC52364A43E006F0B8D /* InstagramModel.xcdatamodeld in Sources */,
+				84FD3E42236DD9C600AA3CAC /* MainTabBarController.swift in Sources */,
 				845727C72351B9E2008C1F85 /* ContentView.swift in Sources */,
 				8463B466235B573300BFC80F /* Extensions.swift in Sources */,
 				8499FE6B235B65A600709432 /* FeedController.swift in Sources */,

@@ -53,6 +53,9 @@ extension FeedController {
             let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
             else { return false }
         
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        print("This is the url:\(urls[urls.count-1] as URL)")
+        
         do {
             try data.write(to: directory.appendingPathComponent("\(fileName).png"))
             print("Successfuly! saved image")

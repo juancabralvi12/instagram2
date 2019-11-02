@@ -20,9 +20,6 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView.register(PostCell.self, forCellWithReuseIdentifier: cellID)
         collectionView.backgroundColor = .white
         collectionView.alwaysBounceVertical = true
-        
-        
-        saveImage(image: UIImage(named: "gatito")!, fileName: "NuevoGatito")
         purge()
         setupData()
         fetchData()
