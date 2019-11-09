@@ -1,4 +1,4 @@
-//
+//  http://school.tecgurus.net/utils/temarios.php?temario=desarrollo-de-apps-moviles-ios.pdf
 //  AppDelegate.swift
 //  lasttest
 //

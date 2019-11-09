@@ -53,9 +53,6 @@ class MainTabBarController : UITabBarController, UITabBarControllerDelegate {
         for item in items {
             item.imageInsets = UIEdgeInsets(top: 4, left: 0, bottom: -4, right: 0)
         }
-        
-        //tabBarController?.selectedIndex = 2
-        //tabBarController?.selectedViewController = redViewController
-        //tabBar.selectedItem = tabBar.items![1] as UITabBarItem
+      
     }
 }

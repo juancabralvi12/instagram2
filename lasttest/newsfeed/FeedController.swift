@@ -20,9 +20,20 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView.register(PostCell.self, forCellWithReuseIdentifier: cellID)
         collectionView.backgroundColor = .white
         collectionView.alwaysBounceVertical = true
+        setUpNavigationItems()
         purge()
         setupData()
         fetchData()
+    }
+    
+    func setUpNavigationItems(){
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "camera3")?.withRenderingMode( .alwaysOriginal), style: .plain, target: self, action: #selector(handleCamera))
+        //navigationItem.leftBarButtonItem?.tintColor = .black
+        navigationItem.titleView = UIImageView(image: UIImage(named: "logo2"))
+    }
+    
+    @objc func handleCamera(){
+        present(CameraController(), animated: true, completion: nil)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
